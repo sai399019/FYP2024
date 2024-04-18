@@ -1,0 +1,27 @@
+<button id="handpickingBtn" onclick="showHandpickingPopup()" style="display: none;">Handpicking Method</button>
+
+<!-- Popup for Handpicking Method -->
+<div id="handpickingPopup" style="display: none;">
+    <h3>Select Separation Method</h3>
+    <button onclick="selectMethod('Handpicking')">Handpicking</button>
+    <button onclick="selectMethod('Machine')">Machine Separation</button>
+    <button onclick="selectMethod('Other')">Other</button>
+</div>
+
+
+function showHandpickingPopup() {
+    let popup = document.getElementById('handpickingPopup'); // Change to 'handpickingBtn'
+    popup.style.display = 'block';
+}
+
+
+        function selectMethod(method) {
+            alert(`Separation Method Selected: ${method}`);
+            let popup = document.getElementById('handpickingPopup');
+            popup.style.display = 'none';
+        }
+
+
+        function navigateToHandler() {
+            window.location.href = 'Home.html';
+        }

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>Form for All Departments</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/clients/Capture.PNG" rel="icon">
+    <link href="assets/img/clients/Capture.PNG" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+
+    <!-- cdn for awesome fonts icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-image: url('2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1px 5px;
+            background-color: rgba(146, 194, 156, 0.5);
+        }
+
+        .navbar a.right {
+            order: -1;
+            margin-right: auto;
+            font-weight: bold;
+            font-style: italic;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+            color: #f6f7f6;
+        }
+
+        .navbar a {
+            color: #f6f7f6;
+            text-decoration: none;
+            padding: 1px 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #81c490;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .container {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            left: 50%;
+            height: 70vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        #formContainer {
+            display: grid;
+            grid-template-areas: ".";
+            width: 400px;
+            font-size: 18px;
+        }
+
+        h4 {
+            color: #02231c;
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #items {
+            display: grid;
+            gap: 15px;
+        }
+
+        input[type="number"] {
+            border: 1px solid #02231c;
+            border-radius: 4px;
+            height: 38px;
+            line-height: 38px;
+            padding-left: 5px;
+            width: 100%;
+        }
+
+        .submit-button {
+            background-color: #007b5f;
+            color: #fff;
+            border-radius: 4px;
+            height: 38px;
+            line-height: 38px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #004c3f;
+        }
+
+        footer {
+            align-items: center;
+            background: #fff;
+            display: grid;
+            padding: 5px 40px;
+        }
+
+        footer button {
+            border: 1px solid rgba(0,0,0,.2);
+            height: 38px;
+            line-height: 38px;
+            width: 100px;
+            border-radius: 19px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer #back {
+            background: #fff;
+            transition: .2s all ease-in-out;
+        }
+
+        footer #back:hover {
+            background: #171A2B;
+            color: white;
+        }
+
+        footer #next {
+            background: #b3e6e0;
+            border: 1px solid transparent;
+            color: #fff;
+        }
+
+        footer #next:hover {
+            background: #171A2B;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        #items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a class="right">Hostel/Mess/Canteen</a>
+        <a class="nav-link scrollto active" href="#hero"><span class="fa fa-home"> Home </span></a>
+        <a class="nav-link scrollto" href="#about"><span class="fa fa-info-circle" aria-hidden="true"> About us</span></a>
+        <a class="nav-link scrollto" href="contact"><span class="fas fa-phone"> Contact</span></a>
+    </div>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="form-container" id="formContainer" style="display:block;">
+                <form action="hostel.php" id="itemForm" method="POST">
+                    <h4>Select Items:</h4>
+<div id="items">
+    <div id="item1">
+        <input type="checkbox" id="item1" name="item1" value="Plastic bottles">
+        <label for="item1">Plastic bottles</label><br>
+    </div>
+    <div id="item2">
+        <input type="checkbox" id="item2" name="item2" value="Milk containers/shampoo bottles/detergent bottle">
+        <label for="item2">Milk containers</label><br>
+    </div>
+    <div id="item3">
+        <input type="checkbox" id="item3" name="item3" value="Plastic bags/food wraps">
+        <label for="item3">Plastic bags/food wraps</label><br>
+    </div>
+    <div id="item4">
+        <input type="checkbox" id="item4" name="item4" value="Food takeaway">
+        <label for="item4">Food takeaway</label><br>
+    </div>
+    <div id="item5">
+        <input type="checkbox" id="item5" name="item5" value="Cables/flooring">
+        <label for="item5">Cables/flooring</label><br>
+    </div>
+    <input type="submit" value="Submit" class="submit-button">
+</div>
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

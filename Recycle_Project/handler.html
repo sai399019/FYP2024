@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Handler</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+   
+
+    <!-- Favicons -->
+    <link href="assets/img/clients/Capture.PNG" rel="icon">
+    <link href="assets/img/clients/Capture.PNG" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+
+    <!-- cdn for awesome fonts icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+
+.pagination {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .pagination button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: none;
+            background-color: #11823b;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    color: #48bf53;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url("3r6.png");
+    background-size: cover;
+    background-position: no-repeat;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 80%; /* Changed width to 80% */
+    max-height: 75vh; /* Added max-height */
+    overflow-y: auto; /* Added scroll if content exceeds max-height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in total width/height */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: #02231c;
+}
+
+th {
+    background-color: #4CAF50;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #e8e8e8;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+button {
+    background-color: #11823b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button.next,
+button.prev {
+    margin: 10px; 
+}
+      
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background-color: #02231c;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .navbar a.right {
+            order: -1;
+            margin-right: auto;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+            color: #f6f7f6;
+        }
+
+        .navbar a {
+            color: #f6f7f6;
+            text-decoration: none;
+            padding: 1px 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #81c490;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="right">Handler</a>
+        <a class="nav-link scrollto active" href="#hero"><span class="fa fa-home"> Home </span></a>
+        <a class="nav-link scrollto" href="#about"><span class="fa fa-info-circle" aria-hidden="true"> About us</span></a>
+        <a class="nav-link scrollto" href="contact"><span class="fas fa-phone"> Contact</span></a>
+    </div>
+
+    <div class="overlay">
+        <button id="button1" onclick="fetchUniqueDates()">Select Date</button>
+        <div id="dateButtons"></div>
+        <table id="reportTable">
+            <thead id="tableHeaders" style="display: none;">
+                <tr>
+                    <th>Item Name</th>
+                    <th>No. of Items</th>
+                    <th>Recyclable or not?</th>
+                    <th>Result</th>
+                    <th>Treatment</th>
+                    <th>Type of Plastic</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <div class="pagination">
+            <button id="btn1" onclick="prevPage()" style="display: none;">Previous</button>
+            <button id="btn2" onclick="nextPage()"style="display: none;">Next</button>
+        </div>
+        <button id="handpickingBtn" onclick="selectMethod()" style="display: none;">Manual Picking Method</button>
+
+<!-- Popup for Handpicking Method -->
+<div id="handpickingPopup" style="display: none;">
+    <h3>Select Separation Method</h3>
+    <button onclick="selectMethod('Handpicking')">Handpicking</button>
+    <button onclick="selectMethod('Machine')">Machine Separation</button>
+    <button onclick="selectMethod('Other')">Other</button>
+</div>
+       
+    </div>
+    <div style="position: absolute; bottom: 150px; width: 80%; text-align: center;">
+        <button onclick="navigateToHandler()">Move to Home Page</button>
+    </div>
+
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        function updatePagination() {
+            let tbody = document.getElementById('tableBody');
+            let rows = tbody.querySelectorAll('tr');
+            let numPages = Math.ceil(rows.length / itemsPerPage);
+
+            if (currentPage < 1) currentPage = 1;
+            if (currentPage > numPages) currentPage = numPages;
+
+            rows.forEach((row, index) => {
+                let start = (currentPage - 1) * itemsPerPage;
+                let end = start + itemsPerPage;
+
+                if (index >= start && index < end) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        function nextPage() {
+            currentPage++;
+            updatePagination();
+        }
+
+        function prevPage() {
+            currentPage--;
+            updatePagination();
+        }
+
+        function fetchUniqueDates() {
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'fetch_dates.php', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    let dates = JSON.parse(xhr.responseText);
+                    let dateButtons = document.getElementById('dateButtons');
+                    dateButtons.innerHTML = '';
+                    dates.forEach(date => {
+                        let button = document.createElement('button');
+                        button.textContent = date;
+                        button.onclick = function() {
+                            fetchDataByDate(date);
+                        };
+                        dateButtons.appendChild(button);
+                    });
+                }
+            };
+            xhr.send();
+        }
+        function fetchDataByDate(date) {
+    let table = document.getElementById('reportTable');
+    let tbody = document.getElementById('tableBody');
+    let thead = document.getElementById('tableHeaders');
+
+    tbody.innerHTML = ''; // Clear existing content
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'fetch_data.php?date=' + date, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            let dataRows = xhr.responseText;
+            tbody.innerHTML = dataRows; // Insert data rows into tbody
+            thead.style.display = ''; // Show table headers
+            document.getElementById('btn1').style.display = 'block';
+            document.getElementById('button1').style.display = 'none';
+            document.getElementById('btn2').style.display = 'block';
+            document.getElementById('handpickingBtn').style.display = 'block';
+            updatePagination(); // Call updatePagination after fetching data
+            document.querySelector('div[style="position: absolute; bottom: 150px; width: 80%; text-align: center;"]').style.bottom = '40px';
+
+        }
+    };
+    xhr.send();
+}
+
+
+function showHandpickingPopup() {
+    let popup = document.getElementById('handpickingBtn'); 
+    popup.style.display = 'block';
+}
+
+        function selectMethod() {
+            alert(`Separation Method Selected: Manual Picking`);
+            let popup = document.getElementById('handpickingPopup');
+            popup.style.display = 'none';
+        }
+
+        function navigateToHandler() {
+            window.location.href = 'Home.html';
+        }
+    </script>
+</body>
+
+</html>

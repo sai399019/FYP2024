@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Report</title>
+
+    <link href="assets/img/clients/Capture.PNG" rel="icon">
+    <link href="assets/img/clients/Capture.PNG" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            color: #48bf53;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-image: url("3r6.png"); 
+            background-size: cover;
+            background-position: no-repeat;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 75%;
+            height: 75vh; 
+            position: absolute;
+            top: 13%;
+            left: 14%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #02231c; 
+    width: 100%;
+    z-index : 1;
+}
+
+.navbar-name{
+    color: #fff;
+    font-size: 20px;
+    background-color: #02231c;
+}
+
+
+
+
+#header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  #header .navbar ul li {
+    margin-right: 20px;
+  }
+  
+  #header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #header .navbar ul li a:hover {
+    color: #11823b;
+  }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            z-index: 1;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            color: #02231c;
+        }
+
+        th {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #555555;
+        }
+
+        button {
+            background-color: #11823b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-top : 20px;
+            z-index: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+    
+            <div class="navbar-name">
+                <h2>Report</h2>
+            </div>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto active" href="#hero"><span class="fa fa-home"> Home </span></a></li>
+              <li><a class="nav-link scrollto" href="#about"><span class="fa fa-info-circle" aria-hidden="true"> About us</span></a></li>
+              <li><a class="nav-link scrollto" href="contact"><span class="fa fa-phone"> Contact</span></a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+    
+        </div>
+      </header>
+
+    <div class ="overlay">
+
+    <div id="reportTable">
+    </div>
+    <button onclick="navigateToHandler()">Move to Handler Page</button>
+    </div>
+    <script>
+        const report = sessionStorage.getItem('report');
+        document.getElementById('reportTable').innerHTML = report;
+
+        function navigateToHandler() {
+            const items = JSON.parse(sessionStorage.getItem('items'));
+            sessionStorage.setItem('items', JSON.stringify(items));
+            window.location.href = 'handler.html';
+        }
+    </script>
+</body>
+
+</html>

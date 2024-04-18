@@ -1,0 +1,80 @@
+body {
+    background-color: #d7d3c3;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+ 
+  #header {
+    background-color: #4f7858;
+    padding: 10px 0;
+  }
+  
+  #header .logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #39673b;
+    margin: 0;
+  }
+  
+  #header .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  #header .navbar ul li {
+    margin-right: 20px;
+  }
+  
+  #header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  #header .navbar ul li a:hover {
+    color: #ddd;
+  }
+  #hero {
+    background-image: url("3r4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #02231c;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #hero .btn-get-started {
+    background-color: #4f7858;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  #hero .btn-get-started:hover {
+    background-color: #355241;
+  }
+  
+  
+  #hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #hero h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  
+  

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>Home</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/clients/Capture.PNG" rel="icon">
+    <link href="assets/img/clients/Capture.PNG" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+
+    <!-- cdn for awesome fonts icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 40px;
+            background-color: #4f7858;
+        }
+
+        .navbar a.right {
+            order: -1;
+            margin-right: auto;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30px;
+            color: #f6f7f6;
+        }
+
+        .navbar a {
+            color: #f6f7f6;
+            text-decoration: none;
+            padding: 1px 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #81c490;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .options-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            position: relative;
+        }
+
+        .option {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            background-color: #4f7858;
+            color: #f6f7f6;
+            max-width: 200px;
+            height: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .option h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .option p {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .option:hover {
+            background-color: #48bf53;
+            cursor: pointer;
+        }
+
+        .quote {
+            text-align: center;
+            margin-top: 20px;
+            scroll-margin-block-end:initial;
+            font-style: italic;
+            color: #ffffff;
+        }
+        .form-heading{
+            text-align: center;
+            color: #ffffff;
+            font-style: italic;
+            font-style:unset;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="right">Roles</a>
+        <a class="nav-link scrollto active" href="#hero"><span class="fa fa-home"> Home </span></a>
+        <a class="nav-link scrollto" href="#about"><span class="fa fa-info-circle" aria-hidden="true"> About us</span></a>
+        <a class="nav-link scrollto" href="contact"><span class="fas fa-phone"> Contact</span></a>
+    </div>
+
+    <div class="quote">
+        "Clean campus today, bright green way tomorrow."
+    </div>
+
+    <div class="form-heading">
+        <h3>Choose the Required Roles</h3>
+    </div>
+
+    <div class="container">
+        <div class="options-container">
+            <div class="option" onclick="window.location.href='generator.html'">
+                <h4>Generator</h4>
+                <p><br><br><br><br>The role responsible for selecting the types of resources or materials that need recycling within an organization or system.</p>
+            </div>
+            <div class="option" onclick="window.location.href='handler.html'">
+                <h4>Handler</h4>
+                <p><br><br><br><br>The role tasked with managing and physically handling the collected recyclable materials, ensuring they are processed correctly.</p>
+            </div>
+            <div class="option" onclick="window.location.href='decisionMaker.html'">
+                <h4>Decision Maker</h4>
+                <p><br><br><br><br>The role with the authority to make final decisions on recycling processes, strategies, and investments based on the recommendations from the Generator and Handler.</p>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
